@@ -91,7 +91,7 @@ const SellerDashboard = () => {
                             >
                                 <LocalMallIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 
-                                SHOPCART
+                                Engineer's Depot
                             </NavLogo>
                         </Typography>
 

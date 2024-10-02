@@ -10,7 +10,6 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import LocalMallIcon from '@mui/icons-material/LocalMall';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Login, Logout, Shop2, Store } from '@mui/icons-material';
 
@@ -18,6 +17,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Avatar, Badge, Divider, Drawer, ListItemIcon } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { styled } from 'styled-components';
+import engineersLogo from '../assets/Engineer.png'
 import { NavLogo } from '../utils/styles';
 
 import Cart from './customer/components/Cart';
@@ -133,7 +133,12 @@ const Navbar = () => {
                                 duration={500}
                                 onClick={homeHandler}
                             >
-                                SHOPCART
+                                <img
+                                    src={engineersLogo}
+                                    alt="Engineer's Depot Logo"
+                                    style={{ height: '40px', width: 'auto', marginRight: '10px' }} // Adjust height/width as necessary
+                                />
+                                Engineer's Depot
                             </NavLogo>
                         </Typography>
                     </HomeContainer>
@@ -212,9 +217,14 @@ const Navbar = () => {
                                 duration={500}
                                 onClick={homeHandler}
                             >
-                                <LocalMallIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 
-                                SHOPCART
+                                <img
+                                    src={engineersLogo}
+                                    alt="Engineer's Depot Logo"
+                                    style={{ height: '40px', width: 'auto', marginRight: '10px' }} // Adjust the size as needed
+                                />
+
+                                Engineer's Depot
                             </NavLogo>
                         </Typography>
                     </HomeContainer>
